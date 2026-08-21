@@ -20,6 +20,16 @@ high_v=data["Volume"].max()
 print(high_v - low_v)
 
 data["Daily_Return"]=data["Price"].pct_change() * 100
+
 print(data["Daily_Return"].mean())
 print(data["Daily_Return"].min())
 print(data["Daily_Return"].max())
+
+avg_p=data["Price"].mean()
+avg_p_dates=data[data["Price"]>avg_p]["Date"]
+print(avg_p_dates)
+print(avg_p_dates.shape[0])
+dates_v=data[data["Volume"]>80000000]["Date"]
+print(dates_v)
+print(dates_v.shape[0])
+
