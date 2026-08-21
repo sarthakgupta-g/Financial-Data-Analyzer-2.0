@@ -33,3 +33,11 @@ dates_v=data[data["Volume"]>80000000]["Date"]
 print(dates_v)
 print(dates_v.shape[0])
 
+print(data[data["Daily_Return"]>1]["Date"])
+print(data[data["Daily_Return"]<-1]["Date"])
+print(data[data["Daily_Return"]>0]["Date"].shape[0])
+print(data[data["Daily_Return"]<0]["Date"].shape[0])
+print(data[data["Daily_Return"]>1.5 | data["Daily_Return"]<-1.5]["Date"])
+
+
+
