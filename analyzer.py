@@ -18,3 +18,8 @@ low_v=data["Volume"].min()
 print(data[data["Volume"]==low_v]["Date"].iloc[0])
 high_v=data["Volume"].max()
 print(high_v - low_v)
+
+data["Daily_Return"]=data["Price"].pct_change() * 100
+print(data["Daily_Return"].mean())
+print(data["Daily_Return"].min())
+print(data["Daily_Return"].max())
