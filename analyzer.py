@@ -13,3 +13,8 @@ last_p=data["Price"].iloc[-1]
 print(first_p)
 print(last_p)
 print((last_p-first_p)/first_p * 100)
+
+low_v=data["Volume"].min()
+print(data[data["Volume"]==low_v]["Date"].iloc[0])
+high_v=data["Volume"].max()
+print(high_v - low_v)
